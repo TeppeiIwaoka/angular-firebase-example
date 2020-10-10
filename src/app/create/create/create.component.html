@@ -3,7 +3,7 @@
 
 <p>カルーセル入る</p>
 
-<form [formGroup]= "form">
+<form [formGroup]= "form" (ngSubmit)= "submit()">
   <mat-form-field>
     <mat-label>名前</mat-label>
     <input formControlName='name' placeholder="ピカチュウ" type="text" matInput autocomplete="off" required>
@@ -13,5 +13,5 @@
     <mat-radio-button value="female">♀</mat-radio-button>
   </mat-radio-group>
 
-  <button mat-raised-button color='primary'>作る</button>
+  <button [disabled] = "form.invalid" mat-raised-button color='primary'>作る</button>
 </form>
