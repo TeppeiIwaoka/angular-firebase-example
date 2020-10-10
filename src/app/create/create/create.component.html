@@ -1,9 +1,14 @@
-
 <h1>ペットを作る</h1>
 
-<p>カルーセル入る</p>
+<div>
+  <swiper [config]="config" [(index)]="selectedPetId">
+    <div *ngFor="let petId of petIds" class="swiper-slide" >
+      <img src="/assets/images/pet-{{petId}}.png" alt="">
+    </div>
+  </swiper>
+</div>
 
-<form [formGroup]= "form" (ngSubmit)= "submit()">
+<form [formGroup]="form" (ngSubmit)="submit()">
   <mat-form-field>
     <mat-label>名前</mat-label>
     <input formControlName='name' placeholder="ピカチュウ" type="text" matInput autocomplete="off" required>
@@ -15,5 +20,5 @@
     <mat-radio-button value="female">♀</mat-radio-button>
   </mat-radio-group>
 
-  <button [disabled] = "form.invalid" mat-raised-button color='primary'>作る</button>
+  <button [disabled]="form.invalid" mat-raised-button color='primary'>作る</button>
 </form>
