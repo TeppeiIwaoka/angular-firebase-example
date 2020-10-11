@@ -16,4 +16,8 @@ export class PetComponent implements OnInit {
   ngOnInit(): void {
   }
 
+getExpPercentage(): number {
+  return this.pet.exp / this.maxExp * 100;
+}
+
 }
