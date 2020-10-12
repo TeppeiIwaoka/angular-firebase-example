@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "gitpet-ecfdd"
+  },
+  "targets": {
+    "gitpet-ecfdd": {
+      "hosting": {
+        "dog-hunting": [
+          "gitpet-ecfdd"
+        ]
+      }
+    }
   }
 }
