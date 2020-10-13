@@ -22,13 +22,17 @@ export class AuthService {
   login() {
     this.afAuth.signInWithPopup(
       new auth.GithubAuthProvider()
-    );
+    ).then(() => {
+      this.snackBar.open('ようこそGitPetへ！', null, {
+        duration: 2000
+      });
+    });
   }
 
   logout() {
     this.afAuth.signOut().then(() => {
       this.snackBar.open('ログアウトしました', null, {
-        duration: 200
+        duration: 2000
       });
     });
     this.router.navigateByUrl('/welcome');
