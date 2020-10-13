@@ -9,10 +9,11 @@ import { Pet } from 'src/app/interfaces/pet';
 export class HomeComponent implements OnInit {
 
   pet: Pet = {
+    petImageId: 1,
     name: 'test',
     exp: 200,
     level: 4,
-    avatarURL: '/assets/images/pet-1.png'
+    trainerId: '1',
   };
 
   constructor() { }
