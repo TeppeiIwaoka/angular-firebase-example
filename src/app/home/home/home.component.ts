@@ -11,15 +11,6 @@ import { PetService } from 'src/app/services/pet.service';
 })
 export class HomeComponent implements OnInit {
 
-  pet: Pet = {
-    petImageId: 1,
-    name: 'test',
-    exp: 200,
-    level: 4,
-    trainerId: '1',
-    gender: 'male'
-  };
-
   pet$: Observable<Pet> = this.petService.getPet(
     this.authService.uid
   );
