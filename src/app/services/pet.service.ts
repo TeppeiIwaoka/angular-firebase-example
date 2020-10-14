@@ -30,7 +30,7 @@ export class PetService {
 
   getPet(trainerId: string): Observable<Pet> {
     return this.db
-      .collection('pets', ref => ref.where('trainerId', '==', trainerId))
+      .collection<Pet>('pets', ref => ref.where('trainerId', '==', trainerId))
       .valueChanges()
       .pipe(
         map(pets => {
