@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     exp: 200,
     level: 4,
     trainerId: '1',
+    gender: 'male'
   };
 
   constructor() { }
