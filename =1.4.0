@@ -1,0 +1,8 @@
++ eslint-plugin-import@2.22.1
+updated 1 package and audited 2113 packages in 18.444s
+
+79 packages are looking for funding
+  run `npm fund` for details
+
+found 5 high severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
