@@ -27,7 +27,7 @@ export const gitHook = functions.https.onRequest(async (request, response) => {
     const pet = pets.docs[0].data();
     let level = 1;
     expTable.some(nextExp => {
-      if(pet.exp + EARN_EXPERIENCE > nextExp) {
+      if(pet.exp + EARN_EXPERIENCE >= nextExp) {
         level ++;
         return false;
       } else {
